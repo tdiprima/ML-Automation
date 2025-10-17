@@ -16,7 +16,8 @@ dls = ImageDataLoaders.from_name_func(
 )
 
 # Train and fine-tune the model
-learn = vision_learner(dls, resnet34, metrics=error_rate).fine_tune(1)
+learn = vision_learner(dls, resnet34, metrics=error_rate)
+learn.fine_tune(1)
 
 # Example prediction
 img = PILImage.create("../data/cat.jpg")
