@@ -12,7 +12,7 @@ This repository contains Python scripts demonstrating 7 libraries that simplify 
 - **neuralprophet_time_series_forecast.py**: Forecasts time series data.
 
 ## Usage
-Install dependencies with `uv add` (see below). Run each script individually. Some require internet (e.g., FastAI for data download).
+Install dependencies with `uv sync`. Run each script individually. Some require internet (e.g., FastAI for data download).
 
 ## Requirements
 Python 3.11. Libraries: autogluon, pandas, fastai, optuna, scikit-learn, pycaret, mlflow, transformers, neuralprophet.
