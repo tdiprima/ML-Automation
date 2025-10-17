@@ -3,7 +3,7 @@ name = "ml-automation"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 dependencies = [
     "autogluon-tabular>=1.1.1",
     "fastai>=2.7.18",
@@ -11,7 +11,7 @@ dependencies = [
     "neuralprophet>=0.4.2",
     "numpy<2",
     "optuna>=4.5.0",
-    "pandas>=2.0.3",
+    "pandas>=2.1.4",
     "pycaret>=3.3.2",
     "torch==2.0.1",
     "torchaudio==2.0.2",
