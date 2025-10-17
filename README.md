@@ -19,4 +19,4 @@ Python 3.11. Libraries: autogluon, pandas, fastai, optuna, scikit-learn, pycaret
 
 ## Image Credit
 
-`cat.jpg` [Image Credit](https://pixabay.com/users/mabelamber-1377835/) **via** [Image Credit](https://files.realpython.com/media/cat.8ce1dab25b77.jpg) resized by me to 512 px.
+`data/cat.jpg` [Image Credit](https://pixabay.com/users/mabelamber-1377835/) **via** [Image Credit](https://files.realpython.com/media/cat.8ce1dab25b77.jpg) resized by me to 512 px.
