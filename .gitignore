@@ -209,3 +209,5 @@ __marimo__/
 .claude/
 AutogluonModels/
 mlruns/
+lightning_logs/
+time_series_data.csv
