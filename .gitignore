@@ -210,4 +210,3 @@ __marimo__/
 AutogluonModels/
 mlruns/
 lightning_logs/
-time_series_data.csv
