@@ -1,15 +1,21 @@
-# Description: This script uses AutoGluon to automatically train, tune, and ensemble models on tabular data for prediction.
+# This script uses AutoGluon to automatically train, tune, and ensemble models on tabular data for prediction.
 # It generates a sample 'data.csv' if not present, trains a predictor, and prints a leaderboard.
 
 import pandas as pd
+import numpy as np
 from autogluon.tabular import TabularDataset, TabularPredictor
 
-# Generate sample data if 'data.csv' doesn't exist (for completeness)
+# Generate larger sample dataset with 1000 rows
+np.random.seed(42)
+n_samples = 1000
+
 sample_data = pd.DataFrame(
     {
-        "feature1": [1, 2, 3, 4, 5],
-        "feature2": [10, 20, 30, 40, 50],
-        "label": [0, 1, 0, 1, 0],
+        "feature1": np.random.randint(1, 100, n_samples),
+        "feature2": np.random.randint(10, 500, n_samples),
+        "feature3": np.random.randn(n_samples),
+        "feature4": np.random.uniform(0, 1, n_samples),
+        "label": np.random.randint(0, 2, n_samples),
     }
 )
 sample_data.to_csv("data.csv", index=False)
