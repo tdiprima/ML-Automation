@@ -35,3 +35,6 @@ predictor = TabularPredictor(label="label").fit(train_data)
 
 # Print leaderboard
 print(predictor.leaderboard(train_data))
+
+# We're looking at a ranking of models by their test scores,
+# showing which algorithms performed best.

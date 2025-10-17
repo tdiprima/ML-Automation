@@ -19,7 +19,10 @@ dls = ImageDataLoaders.from_name_func(
 learn = vision_learner(dls, resnet34, metrics=error_rate).fine_tune(1)
 
 # Example prediction
-img = PILImage.open("../data/cat.jpg")
+img = PILImage.create("../data/cat.jpg")
 
 pred, pred_idx, probs = learn.predict(img)
 print(f"Prediction: {pred}; Probability: {probs[pred_idx]:.4f}")
+
+# 
+# 
