@@ -1,9 +1,11 @@
-# Description: This script uses MLFlow to track an experiment: logging params, training a RandomForest model on Iris data, and logging metrics/models.
+# This script uses MLFlow to track an experiment: logging params, training a RandomForest model on Iris data, and logging metrics/models.
 
 import mlflow
+import numpy as np
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+from mlflow.models import infer_signature
 
 # Load data
 X, y = load_iris(return_X_y=True)
@@ -26,7 +28,21 @@ with mlflow.start_run():
     accuracy = model.score(X_test, y_test)
     mlflow.log_metric("accuracy", accuracy)
 
-    # Log the model artifact
-    mlflow.sklearn.log_model(model, "random_forest_model")
+    # Create predictions for signature inference
+    predictions = model.predict(X_test)
+
+    # Infer the model signature
+    signature = infer_signature(X_test, predictions)
+
+    # Create an input example (first test sample)
+    input_example = X_test[:1]
+
+    # Log the model artifact with signature and input example
+    mlflow.sklearn.log_model(
+        model,
+        artifact_path="random_forest_model",
+        signature=signature,
+        input_example=input_example
+    )
 
     print(f"Logged accuracy: {accuracy}")
