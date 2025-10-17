@@ -1,4 +1,4 @@
-# Description: This script uses NeuralProphet to forecast time series data.
+# This script uses NeuralProphet to forecast time series data.
 # It generates a sample 'time_series_data.csv' if not present, fits the model, and predicts future values.
 
 import pandas as pd
@@ -29,3 +29,6 @@ forecast = m.predict(future)
 
 # Print tail of forecast
 print(forecast[["ds", "yhat1"]].tail())
+
+# We're watching a neural network learn patterns in time series data,
+# then generate future predictions.

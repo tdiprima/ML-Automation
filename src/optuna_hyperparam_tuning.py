@@ -1,4 +1,4 @@
-# Description: This script uses Optuna to optimize hyperparameters for an SVM classifier on the Iris dataset.
+# This script uses Optuna to optimize hyperparameters for an SVM classifier on the Iris dataset.
 # It defines an objective function and runs optimization for 100 trials.
 
 import optuna
@@ -23,3 +23,6 @@ study = optuna.create_study(direction="maximize")
 study.optimize(objective, n_trials=100)
 print(f"Best trial value: {study.best_value}")
 print(f"Best params: {study.best_params}")
+
+# Best trial value: 0.9199999999999999
+# Best params: {'C': 0.007512459239665884, 'kernel': 'linear'}
