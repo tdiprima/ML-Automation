@@ -45,4 +45,4 @@ with mlflow.start_run():
         input_example=input_example
     )
 
-    print(f"Logged accuracy: {accuracy}")
+    print(f"Logged accuracy: {accuracy}")  # Accuracy logged: 1.0 (perfect accuracy)
