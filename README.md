@@ -15,4 +15,4 @@ This repository contains Python scripts demonstrating 7 libraries that simplify 
 Install dependencies with `uv add` (see below). Run each script individually. Some require internet (e.g., FastAI for data download).
 
 ## Requirements
-Python 3.8+. Libraries: autogluon, pandas, fastai, optuna, scikit-learn, pycaret, mlflow, transformers, neuralprophet.
+Python 3.11. Libraries: autogluon, pandas, fastai, optuna, scikit-learn, pycaret, mlflow, transformers, neuralprophet.
