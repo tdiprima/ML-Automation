@@ -24,6 +24,4 @@ img = PILImage.create("../data/cat.jpg")
 
 pred, pred_idx, probs = learn.predict(img)
 print(f"Prediction: {pred}; Probability: {probs[pred_idx]:.4f}")
-
-# 
-# 
+# Prediction: cat; Probability: 1.0000
