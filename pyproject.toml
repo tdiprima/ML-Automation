@@ -12,7 +12,7 @@ dependencies = [
     "numpy<2",
     "optuna>=4.5.0",
     "pandas>=2.0.3",
-    "pycaret>=2.2.2",
+    "pycaret>=3.3.2",
     "torch==2.0.1",
     "torchaudio==2.0.2",
     "torchvision==0.15.2",
