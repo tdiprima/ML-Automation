@@ -1,4 +1,4 @@
-# Description: This script uses Hugging Face's pipeline for sentiment analysis on text.
+# This script uses Hugging Face's pipeline for sentiment analysis on text.
 # It loads a pre-trained model and performs a prediction.
 
 from transformers import pipeline
@@ -13,3 +13,6 @@ result = classifier(
 
 # Print result
 print(result)
+
+# Label: POSITIVE
+# Score: 0.9999 (99.99% confidence)
