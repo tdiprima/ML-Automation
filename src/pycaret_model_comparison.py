@@ -1,5 +1,5 @@
 # This script uses PyCaret to set up data, compare classification models, and tune the best one.
-# It generates a sample 'your_dataset.csv' if not present.
+# It generates a sample 'my_dataset.csv' if not present.
 
 import pandas as pd
 from pycaret.classification import *
@@ -7,10 +7,10 @@ import numpy as np
 from pathlib import Path
 
 # Define path to CSV file
-csv_path = Path(__file__).parent / "../data/your_dataset.csv"
+csv_path = Path(__file__).parent / "../data/my_dataset.csv"
 csv_path = csv_path.resolve()
 
-# Generate sample data if 'your_dataset.csv' doesn't exist
+# Generate sample data if 'my_dataset.csv' doesn't exist
 if not csv_path.exists():
     np.random.seed(42)
     n_samples = 200
