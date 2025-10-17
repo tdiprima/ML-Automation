@@ -16,3 +16,7 @@ Install dependencies with `uv add` (see below). Run each script individually. So
 
 ## Requirements
 Python 3.11. Libraries: autogluon, pandas, fastai, optuna, scikit-learn, pycaret, mlflow, transformers, neuralprophet.
+
+## Image Credit
+
+`cat.jpg` [Image Credit](https://pixabay.com/users/mabelamber-1377835/) **via** [Image Credit](https://files.realpython.com/media/cat.8ce1dab25b77.jpg) resized by me to 512 px.
