@@ -4,18 +4,23 @@
 from fastai.vision.all import *
 
 # Download and prepare data
-path = untar_data(URLs.PETS)/'images'
+path = untar_data(URLs.PETS) / "images"
 
 # Define label function
 dls = ImageDataLoaders.from_name_func(
-    path, get_image_files(path), valid_pct=0.2,
-    label_func=lambda x: 'cat' if x[0].isupper() else 'dog', item_tfms=Resize(224)
+    path,
+    get_image_files(path),
+    valid_pct=0.2,
+    label_func=lambda x: "cat" if x[0].isupper() else "dog",
+    item_tfms=Resize(224),
 )
 
 # Train and fine-tune the model
 learn = vision_learner(dls, resnet34, metrics=error_rate).fine_tune(1)
 
 # Example prediction (TODO: replace with your image path)
-img = PILImage.create('path_to_your_image.jpg')  # TODO: Get an image like 'cat.jpg' for testing
+img = PILImage.create(
+    "path_to_your_image.jpg"
+)  # TODO: Get an image like 'cat.jpg' for testing
 pred, pred_idx, probs = learn.predict(img)
 print(f"Prediction: {pred}; Probability: {probs[pred_idx]:.4f}")
