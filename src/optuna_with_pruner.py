@@ -56,5 +56,6 @@ print(
     f"Number of pruned trials: {len([t for t in study.trials if t.state == optuna.trial.TrialState.PRUNED])}"
 )
 
-# Best trial value: 0.9199999999999999
-# Best params: {'C': 0.007512459239665884, 'kernel': 'linear'}
+# Best trial value: 0.94
+# Best params: {'C': 0.009556347487713545, 'kernel': 'linear'}
+# Number of pruned trials: 28
