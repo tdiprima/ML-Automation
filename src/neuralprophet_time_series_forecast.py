@@ -1,30 +1,11 @@
 # This script uses NeuralProphet to forecast time series data.
-# It generates a sample 'time_series_data.csv' if not present, fits the model, and predicts future values.
+# It fits the model and predicts future values.
 
 import pandas as pd
 from neuralprophet import NeuralProphet
-from pathlib import Path
 
-# Define path to CSV file
-csv_path = Path(__file__).parent / "../data/time_series_data.csv"
-csv_path = csv_path.resolve()
-
-# Generate sample data if 'time_series_data.csv' doesn't exist (daily data example)
-if not csv_path.exists():
-    dates = pd.date_range(start="2023-01-01", periods=100, freq="D")
-    sample_data = pd.DataFrame(
-        {
-            "ds": dates,
-            "y": [
-                i + (i % 7) * 10 for i in range(100)
-            ],  # Simple trend with weekly seasonality
-        }
-    )
-    csv_path.parent.mkdir(parents=True, exist_ok=True)
-    sample_data.to_csv(csv_path, index=False)
-
-# Load data
-data = pd.read_csv(csv_path)
+# Load data (must have 'ds' for date and 'y' for value)
+data = pd.read_csv("../data/time_series_data.csv")
 
 # Initialize and fit model
 m = NeuralProphet()
