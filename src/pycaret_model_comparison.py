@@ -25,3 +25,4 @@ print(tuned_best)
 
 # We're looking at a benchmark of different machine learning algorithms,
 # then a detailed evaluation of the winner after optimization.
+# GradientBoostingClassifier(...)
