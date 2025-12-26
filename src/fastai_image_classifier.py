@@ -1,5 +1,6 @@
 # This script uses FastAI to fine-tune a ResNet34 model for image classification (e.g., pets).
-# It downloads pet images via untar_data. For custom predictions, get sample images (e.g., 'cat.jpg' or 'dog.jpg') from any source like Unsplash or your local files.
+# It downloads pet images via untar_data. For custom predictions, get sample images
+# (e.g., 'cat.jpg' or 'dog.jpg') from any source like Unsplash or your local files.
 
 from fastai.vision.all import *
 

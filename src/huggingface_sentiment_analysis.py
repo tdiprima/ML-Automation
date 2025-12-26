@@ -7,7 +7,9 @@ from transformers import pipeline
 classifier = pipeline("sentiment-analysis")
 
 # Perform prediction
-result = classifier("This article on Python automation is absolutely brilliant and game-changing.")
+result = classifier(
+    "This article on Python automation is absolutely brilliant and game-changing."
+)
 
 # Print result
 print(result)

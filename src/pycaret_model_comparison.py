@@ -1,5 +1,5 @@
 """
-This script uses PyCaret to set up data, compare classification models,
+Uses PyCaret to set up data, compare classification models,
 and tune the best one.
 """
 
